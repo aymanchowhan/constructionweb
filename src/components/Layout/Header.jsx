@@ -3,7 +3,7 @@ import HashLink from 'next/link'
 import React, { useState } from 'react'
 import { CiMenuFries } from "react-icons/ci";
 import { IoIosCloseCircleOutline } from "react-icons/io";
-function Header() {
+function Header({ changeHeaderColor }) {
   const menu = [
     {
       name: 'HOME',
@@ -36,10 +36,10 @@ function Header() {
 
 
   return (
-    
-      <div className='container m-auto relative bg-green-100'>
-        <div className='flex h-fit lg:justify-evenly justify-between gap-8 px-2 py-5'>
-          <div className='my-auto'>COBUILD</div>
+    <div className={`${changeHeaderColor ? 'bg-white text-black' : 'bg-transparent text-white'} duration-300`}>
+      <div className='container m-auto relative bg-transparent'>
+        <div className='flex h-fit justify-between gap-8 px-2 py-5'>
+          <div className={`my-auto`}>COBUILD</div>
           <div className='my-auto flex'>
             <div className='cursor-pointer' onClick={() => setIsOpen(!IsOpen)}>
               {
@@ -79,12 +79,8 @@ function Header() {
             </div>
           </div>
         }
-          </div>
-     
-
-
-    
-
+      </div>
+    </div>
   )
 }
 

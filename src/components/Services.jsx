@@ -35,7 +35,7 @@ function Services() {
             <div className='flex justify-center text-[30px] lg:text-[36px]'>
                 Our Services
             </div>
-            <div className='flex justify-center px-2 lg:px-96 pt-5 text-[14px]'>
+            <div className='text-center px-2 text-[14px] lg:w-1/2 mx-auto text-gray-500 pt-10'>
             Duis sed odio sit amet nibh vulputate cursus a sit amet mauris morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
             </div>
             <div className='grid grid-cols-1 lg:grid-cols-4 w-fit lg:w-[70%] mx-auto gap-0 pb-10'>
