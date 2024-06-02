@@ -1,0 +1,22 @@
+import React from 'react'
+
+function Skills() {
+  return (
+    <div id='home' className='grid grid-cols-1 lg:grid-cols-2 gap-x-5 h-screen bg-blue-400 pt-28 container mx-auto'>
+    <div className=' text-white px-10 ' >
+        <div className='font-bold lg:leading-[4rem] text-center lg:text-left leading-[2.5rem] text-[34px] lg:text-[40px] mb-[30px]'>
+        We are expert in this field since almost 20 years.
+        </div>
+        <div className="leading-8 mb-[40px] text-center lg:text-left text-[20px]">
+        Proin gravida nibh vel velit auctor aliquet aenean sollicitudin, lorem quis bibendum auctor, nisi elit cuat ipsum, nec sagittis sem nibh id elit duis sed odio sit nibh vulputate cursus a sit amet mauris morbi accumsan
+        </div>
+    </div>
+    <div>
+      HEllo
+    </div>
+
+    </div>
+  )
+}
+
+export default Skills
