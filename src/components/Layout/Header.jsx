@@ -55,7 +55,7 @@ function Header({ changeHeaderColor }) {
 
                   menu.map((item, index) =>
                     <Link className='my-auto' key={index} href={item.path}>
-                      <div className='hover:border-b border-[#F5AF00] hover:text-[#F5AF00] text-[14px]'> {item.name} </div>
+                      <div className='hover:border-b border-[#F5AF00] hover:text-[#F5AF00] text-[12px]'> {item.name} </div>
                     </Link>
                   )
                 }
