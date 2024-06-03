@@ -41,7 +41,7 @@ function Services() {
             <div className='grid grid-cols-1 lg:grid-cols-4 w-fit lg:w-[70%] mx-auto gap-0 lg:pb-16 pb-5 '>
                 {
                     data.map((item, index) => (
-                        <div className=' p-[20px] mt-14'>
+                        <div key={index} className=' p-[20px] mt-14'>
                             <div className={`h-[70px] w-[70px] mx-auto  flex text-[#F5AF00] text-5xl mb-[0px] lg:mb-[30px]`}>
                                 {item.icon}
                             </div>
