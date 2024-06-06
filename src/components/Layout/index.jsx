@@ -33,7 +33,7 @@ function Layout({ children, title = 'My website', hideHeader = false }) {
                 <meta name="description" content="My Portfolio" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <header className='fixed left-0 right-0 top-0 text-white'>
+            <header className='fixed z-10 left-0 right-0 top-0 text-white'>
                 {
                     !hideHeader &&
                     <Header changeHeaderColor={changeHeaderColor} />

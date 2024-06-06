@@ -10,7 +10,7 @@ import React from 'react'
 function index() {
   return (
     <Layout>
-      <div className={`bg-[url('https://res.cloudinary.com/dxnecw20a/image/upload/v1717325691/Revital/m0hpa3tuosuosdgdyewy.png')] bg-cover bg-center bg-no-repeat w-full h-screen`}>
+      <div className={`bg-[url('https://res.cloudinary.com/dxnecw20a/image/upload/v1717325691/Revital/m0hpa3tuosuosdgdyewy.png')] bg-cover bg-center bg-no-repeat w-full h-screen bg-fixed`}>
         <Hero />
       </div>
 

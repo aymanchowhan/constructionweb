@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import HashLink from 'next/link'
 import React, { useState } from 'react'
 import { CiMenuFries } from "react-icons/ci";
 import { IoIosCloseCircleOutline } from "react-icons/io";

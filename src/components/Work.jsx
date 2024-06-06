@@ -41,10 +41,10 @@ function Work() {
       name: 'Planning',
       type: 'planning'
     },
-
   ]
+
   return (
-    < div id='work' className='min-h-screen  m-auto container pt-[90px] pb-[70px]' >
+    <div id='work' className='min-h-screen m-auto container pt-[90px] pb-[70px] relative '>
       <div className='text-center text-[36px]'>
         Featured Work
       </div>
@@ -52,26 +52,34 @@ function Work() {
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quam corporis, quis impedit architecto delectus voluptatum fugiat beatae nemo eaque.
       </div>
       <div className='flex justify-center mt-10 lg:gap-6'>
-        <div onClick={() => setTab('all')} className={`${tab == 'all' && 'bg-yellow-400 rounded-full text-white'} px-5 py-2 cursor-pointer duration-500 my-auto`}>All</div>
-        <div onClick={() => setTab('building')} className={`${tab == 'building' && 'bg-yellow-400 rounded-full text-white'} px-5 py-2 cursor-pointer duration-500 my-auto`}>Building</div>
-        <div onClick={() => setTab('construction')} className={`${tab == 'construction' && 'bg-yellow-400 rounded-full text-white'} px-5 py-2 cursor-pointer duration-500 my-auto`}>Construction</div>
-        <div onClick={() => setTab('planning')} className={`${tab == 'planning' && 'bg-yellow-400 rounded-full text-white'} px-5 py-2 cursor-pointer duration-500 my-auto`}>Planning</div>
+        <div onClick={() => setTab('all')} className={`${tab === 'all' && 'bg-yellow-400 rounded-full text-white'} px-5 py-2 cursor-pointer duration-500 my-auto`}>All</div>
+        <div onClick={() => setTab('building')} className={`${tab === 'building' && 'bg-yellow-400 rounded-full text-white'} px-5 py-2 cursor-pointer duration-500 my-auto`}>Building</div>
+        <div onClick={() => setTab('construction')} className={`${tab === 'construction' && 'bg-yellow-400 rounded-full text-white'} px-5 py-2 cursor-pointer duration-500 my-auto`}>Construction</div>
+        <div onClick={() => setTab('planning')} className={`${tab === 'planning' && 'bg-yellow-400 rounded-full text-white'} px-5 py-2 cursor-pointer duration-500 my-auto`}>Planning</div>
       </div>
-      <div className='mt-14 grid grid-cols-1 lg:grid-cols-3 gap-4'>
-        {
-          data.map((item, index) =>
-            <div key={index} onMouseOver={() => setActiveIndex(index)} onMouseOut={() => setActiveIndex(null)}
-              className={`${tab == 'all' || tab == item.type ? 'block' : 'hidden'} w-[300px] h-[250px] m-auto rounded-xl overflow-hidden relative`}>
-              <Image src={item.img} alt='' className={`w-full h-full duration-700 object-cover ${activeIndex == index && 'scale-125'}`} />
-              <div className={` ${activeIndex == index && 'absolute top-0 right-0 left-0 bottom-0 bg-[#f5af0070]  '} `}>
-                <div className='text-white text-center text-[14px] py-28'>{item.name}</div>
-              </div>
+  
+
+      <div className='flex flex-wrap mx-auto justify-center gap-3 mt-12 w-[70%]'>
+      {data.map((item, index) => (
+          <div
+            key={index}
+            onMouseOver={() => setActiveIndex(index)}
+            onMouseOut={() => setActiveIndex(null)}
+            className={`${tab === 'all' || tab === item.type ? 'block' : 'hidden'} w-[300px] h-[250px] m-auto rounded-xl overflow-hidden relative`}
+          >
+            <Image
+              src={item.img}
+              alt={item.name}
+              className={`w-full h-full duration-700 object-cover ${activeIndex === index ? 'scale-125' : ''}`}
+            />
+            <div className={`${activeIndex === index ? 'absolute top-0 right-0 left-0 bottom-0 bg-[#f5af0070]' : ''}`}>
+              <div className='text-white text-center text-[14px] py-28'>{item.name}</div>
             </div>
-          )
-        }
+          </div>
+        ))}
       </div>
     </div>
-  )
+  );
 }
 
 export default Work

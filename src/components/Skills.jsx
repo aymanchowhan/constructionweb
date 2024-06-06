@@ -48,13 +48,15 @@ function Skills() {
         </div>
 
       </div>
-      <div className='h-[250px] bg-[#F5AF00] mt-10 text-white'>
-        {/* An innovative company working on latest technologies */}
+
+      < div className=' bg-[#F5AF00] mt-10 text-white text-[30px] lg:text-[40px] lg:flex text-center justify-center py-24 gap-10'>
+        An innovative company working on latest technologies
         <div>
-        {/* <button className='px-[40px] py-[18px] rounded-full hover:bg-white hover:text-black border border-white bg-[#F5AF00] text-[12px] duration-500 font-bold m-auto lg:m-0'>
+        <button className='px-[30px] py-[18px] rounded-full hover:bg-white hover:text-black border border-white bg-[#F5AF00] text-[12px] duration-500 font-bold mt-5 lg:mt-0 w-fit mx-auto'>
           Get a Quote
-        </button> */}
+        </button>
         </div>
+      
         
       </div>
     </div>
